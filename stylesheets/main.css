@@ -216,7 +216,7 @@ rt {
 }
 #footer_contacts {
   	line-height: 2;
-  	font-size: 0.9vw;
+  	font-size: 1ex;
 	position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
