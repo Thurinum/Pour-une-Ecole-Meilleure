@@ -21,7 +21,7 @@ function fetchQuotes() {
 	let target = document.getElementById("wrapperMain_subheading");
 	let content = "Bienvenue!"; // Placeholder text
 
-	fetch("../content/embed/quotes_fr.json")
+	fetch("content/embed/quotes_fr.json")
 	.then(function(response) {
 		return response.json();
 	})
@@ -40,7 +40,7 @@ function fetchQuotes() {
 // Generates HTML to display in slideshow
 // We don't preload since it's a small document
 function fetchLetters(audience) {
-	fetch('/content/embed/letters_fr.json')
+	fetch('content/embed/letters_fr.json')
 	.then(response => response.json())
 	.then(data => {
 		// Initialize slideshow with no content
