@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/stylesheets/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/interviews.css" rel="stylesheet" type="text/css" />
+ 	<link href="/resources/graphics/throbber.gif" type="image/icon" rel="icon" />
+	<title>Pour une École Meilleure</title>
+</head>
+<body>
+	<iframe class="header" src="/content/iframe/header.html"></iframe>
+	<div id="wrapperInterviews">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/V-_O7nl0Ii0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Unlisted video removed for privacy reasons</p>
+		<p>Unlisted video removed for privacy reasons</p>
+		<p>Unlisted video removed for privacy reasons</p>
+	</div>
+	
+	<script type="text/javascript">
+		let button = document.createElement("button");
+		button.setAttribute("class", "button");
+		document.body.append(button);
+		button.style.position = "fixed";
+		button.style.right = "1%";
+		button.style.top = "50%";
+		
+		button.onclick = function() {
+			// Send a bug report
+			let script = document.createElement("script");
+			script.innerHTML = `setSlideshow("", "", "https://docs.google.com/forms/d/e/1FAIpQLSdoKhJd4oYacZ9AbXynsBUhvKXW1BW7sLnV0YTfi7tpkFGExQ/viewform?embedded=true", "1");`;
+			document.body.append(script);
+		};
+	</script>
+</body>
+</html>

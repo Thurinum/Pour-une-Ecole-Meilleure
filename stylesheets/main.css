@@ -1,0 +1,407 @@
+/* -------- GLOBAL STYLE -------- */
+:root {
+	--background-primary: #FFFFFF;
+	--background-secondary: #E5E5E5;
+	--font-primary: #000000;
+	--font-secondary: #FFFFFF;
+	--highlight-primary: #FFC700;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: Quicksand, sans-serif;
+	
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+ 	scroll-behavior: smooth;
+}
+
+/* Hide scrollbars on Webkit/Blink */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: var(--background-primary);
+}
+
+/* We use <rt> as a cheap text-over-text */
+rt {
+	text-align: left;
+}
+
+
+
+
+
+/* ------- HEADER IFRAME ------- */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: calc(7vh - 11px);
+	
+	border: 0;
+	overflow: hidden;
+	transition: opacity 0.5s linear;
+
+	z-index: 1;
+	padding-top: 8px;
+	box-shadow: 0 10px 10px 5px var(--background-primary);
+	background-color: var(--background-primary);
+	background-clip: padding-box;
+}
+.header html {
+	overflow: hidden;
+}
+
+
+
+
+
+/* ----------- NAVIGATION BAR ----------- */
+#header_nav {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 23% 23% 8% 23% 23%;
+	grid-template-rows: auto;
+	grid-auto-flow: column;
+	text-align: center;
+	align-items: center;
+	justify-items: center;
+	overflow: hidden;
+
+	background: var(--theme-background-primary);
+}
+#header_nav a {
+ 	text-decoration: none;
+  	font-family: Quicksand;
+  	color: var(--theme-font-primary);
+ 	font-size: 2vw;
+    transition: transform 0.1s linear;
+}
+#header_nav a:hover {
+	transform: scale(1.05);
+}
+#header_nav a:active {
+	transform: scale(0.95);
+}
+
+#header_logo {
+	position: relative;
+    left: 1.5vw;
+	height: 90vh;
+	bottom: 5%;
+}
+#header_logo:hover {
+	transform: scale(1.05);
+}
+
+
+
+
+
+/* ------- INTERFACE ELEMENTS ------- */
+.button {
+	text-decoration: none;
+	background-color: var(--highlight-primary);
+	border-radius: 50px;
+	color: black;
+	font-family: Quicksand;
+ 	font-variation-settings: 'wght' 400;
+	user-select: none;
+	padding: 1vw 2vh;
+
+	width: fit-content;
+	width: -moz-fit-content;
+	height: fit-content;
+	height: -moz-fit-content;
+	margin-left: auto;
+    margin-right: auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	transition: transform 0.1s ease-out, font-variation-settings 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+.button:hover {
+	transform: translate(0, -5%);
+	box-shadow: 0 6px 5px 0 var(--background-secondary);
+ 	font-variation-settings: 'wght' 1000;
+}
+.button:active {
+	transform: translate(0, 5%);
+	box-shadow: none;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+#suggestions {
+	position: fixed;
+	right: 1%;
+	top: 50%;
+	transform: translate(0, -50%) rotate(90deg);
+	
+	border: solid 2px black;
+	
+	transition: font-variation-settings 0.3s ease-in-out,
+				transform 0.3s ease-in-out,
+				box-shadow 0.1s ease-in-out,
+				margin-top 0.1s ease-in-out;
+}
+#suggestions:hover {
+	transform: translate(0, -50%);
+	box-shadow: 0 6px 5px 0 #3131314A;
+}
+#suggestions:active {
+	margin-top: 3px;
+	box-shadow: none;
+}
+
+
+
+/* ----------- FOOTER IFRAME AND ITS CONTENTS; ----------- */
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 18vh;
+	left: 0;
+	top: 454vh;
+	border: 0;
+}
+
+#footer {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: 25% 25% 25% 25%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #000000;
+}
+#footer_wrapperHeading {
+	display: grid;
+    justify-items: center;
+    align-items: center;
+	height: 100%;
+	color: var(--font-secondary);
+	background-color: var(--highlight-primary);
+}
+#footer_wrapperHeadingArrow {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	clip-path: polygon(50% 30%, 50% 70%, 55% 50%);
+	background-color: var(--highlight-primary);
+}
+#footer_heading {
+	font-family: Kalam;
+	font-size: 1.5vw;
+	text-align: center;
+	color: var(--font-primary);
+}
+#footer_wrapperContact {
+	color: var(--font-primary);
+	font-size: 10vmin;
+	overflow: hidden;
+}
+#footer_wrapperNav {
+	color: var(--font-secondary);
+}
+#footer_contacts {
+  	line-height: 2;
+  	font-size: 0.9vw;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	margin: 0;
+}
+.footer_icon {
+  width: 1.3vw;
+  height: auto;
+  position: relative;
+  top: 2vh;
+  margin-right: 2%;
+}
+#footer_menu {
+  text-align: center;
+}
+#footer_about {
+	font-size: 0.8em;
+	padding: 10px;
+}
+#footer_about:hover {
+	box-shadow: 0 6px 3px 0 #AAAAA982;
+}
+
+
+
+
+
+.slideshow {
+	width: 85vw;
+	height: 80vh;
+	
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0.9);
+	
+	background-image: url("../resources/graphics/Logo_Throbber_Opaque.gif");
+	background-color: var(--background-primary);
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow: 0 0 3px 4px #00000021;
+	overflow: hidden;
+
+	z-index: 3;
+	opacity: 0;
+	display: none;
+	transform: translate(-50%, -50%) scale(0.9);
+	transition: transform 0.5s ease-out, opacity 0.5s ease-out,
+				width 0.3s ease-out, height 0.3s ease-out;
+}
+
+.slideshow_arrow {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%) scale(0);
+	z-index: 1;
+	user-select: none;
+
+	font-size: 5vmin;
+	text-align: center;
+	
+	display: grid;
+	align-items: center;
+
+	width: 5%;
+	height: 30%;
+	color: var(--highlight-primary);
+	background-color: #11111112;
+	text-shadow: var(--highlight-primary) 0 0 3px;
+
+	transition: background 0.1s ease-out, color 0.1s linear, text-shadow 0.1s ease-out, transform 0.5s ease-out, box-shadow 0.1s ease-out, margin 0.1s ease-out;
+}
+.slideshow_arrow:hover {
+	background-color: #000000DD;
+	color: var(--font-secondary);
+	text-shadow: var(--font-secondary) 0 0 10px;
+}
+.slideshow_arrow_left {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.slideshow_arrow_left:hover {
+	box-shadow: 4px 0 4px 0px #BFBFBF;
+}
+.slideshow_arrow_left:active {
+	margin-left: 4px;
+	box-shadow: none;
+}
+.slideshow_arrow_right {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	right: 0;
+}
+.slideshow_arrow_right:hover {
+	box-shadow: -4px 0 4px 0px #BFBFBF;
+}
+.slideshow_arrow_right:active {
+	margin-right: 4px;
+	box-shadow: none;
+}
+
+.slideshow_title {
+	width: fit-content;
+	height: 34px;
+	
+	position: absolute;
+	left: 47px;
+	top: -47px;
+	
+	color: var(--highlight-primary);
+	background-color: #000000CC;
+	padding: 13px 1% 0 1%;
+	
+	z-index: 3;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: top 0.5s ease-out;
+}
+
+.slideshow_close {
+	width: 47px;
+	height: 47px;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	user-select: none;
+	background-color: var(--highlight-primary);
+	text-shadow: var(--highlight-primary) 0 0 3px;
+
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	font-size: 1.2em;
+	
+	transition: background-color 0.1s ease-out, font-size 0.1s ease-out;
+	z-index: 1;
+}
+.slideshow_close:hover {
+	background-color: #F7C100EE;
+	text-shadow: var(--font-secondary) 0 0 10px;
+	font-size: 1.5em;
+}
+.slideshow_close:active {
+	font-size: 0.9em;
+	background-color: #F7C100DD;
+}
+
+.slideshow_resize {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+	background-color: var(--highlight-primary);
+	
+	cursor: pointer;
+	user-select: none;
+	z-index: 2;
+}
+
+.slideshow_progress {
+	width: fit-content;
+	width: -moz-fit-content;
+	
+	position: absolute;
+    bottom: 1%;
+    left: 46%;
+    transform: translate(50%, 0);
+	
+    color: var(--highlight-primary);
+	background-color: #000000cc;
+	border: solid 1.5px black;
+	border-radius: 3px;
+	padding: 1%;
+	text-align: center;
+	font-weight: bold;
+	
+	z-index: 3;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: none; /* slideshow.js */
+	position: absolute;
+	transition: transform 1s cubic-bezier(.68,-0.55,.27,1.55), opacity 1s cubic-bezier(.68,-0.55,.27,1.55);
+}

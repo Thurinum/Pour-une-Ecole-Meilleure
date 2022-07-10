@@ -1,0 +1,75 @@
+html {
+    background-color: var(--background-secondary);
+    scroll-behavior: smooth;
+}
+
+p {
+	margin-right: 12%;
+	margin-left: 12%;
+	top: 7vh;
+	text-align: justify;
+}
+
+li {
+	margin-right: 12%;
+    margin-left: 12%;
+	text-align: justify;
+}
+
+#header {
+    font-size: 4vw;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 13vh;
+    animation: popup 2s;
+}
+
+#logo {
+	width: 15%;
+	height: auto;
+ 	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 9vh;
+}
+
+#anchor {
+	width: 0%;
+	height: 2vh;
+	border-radius: 4px;
+	overflow: hidden;
+	line-height: 60px;
+	transition: width 0.1s linear;
+}
+#anchor:hover {
+	width: 15%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#anchor:hover::after {
+	content: '\2001Sauter à la pétition';
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#problems {
+    margin-left: 16%;
+}
+
+#sources {
+    font-size: 1vw;
+    text-align: left;
+}
+
+#footer {
+	position: static;
+	height: 18vh;
+	background-color: #414247;
+}
+
+@keyframes popup {
+    0%{opacity: 0; font-size: 3vw;}
+    75% {font-size: 4.7vw;}
+    100% {opacity: 100; font-size: 4vw;}
+}

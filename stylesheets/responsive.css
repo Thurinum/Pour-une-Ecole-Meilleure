@@ -1,0 +1,45 @@
+@media only screen and (max-width: 755px) {
+	#wrapperGallery_flexContainer {
+		flex-direction: column;
+	}	
+	#wrapperGallery_flexContainer div {
+		width: auto;
+    	height: 17vh;
+		grid-auto-flow: row;
+		grid-template-rows: auto;
+    	grid-template-columns: 25% 58% 17%;
+		margin-top: 1%;
+    	margin-bottom: 1%;
+	}
+
+	#wrapperLetters_layout {
+		grid-template-rows: 36% 64%;
+    	grid-template-columns: unset;
+	}
+
+	#wrapperLetters_body {
+		grid-template-rows: 10% 35% 55%;
+		grid-template-columns: unset;
+	}
+	
+	#wrapperLetters_gridContainer {
+		grid-template-columns: 33% 33% 33%;
+		grid-template-rows: unset;
+	}
+
+	#slideshow_lettersStudents {
+		
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#wrapperIntro_body {
+		width: 83%;
+   		position: absolute;
+	}
+
+	#wrapperIntro_gridContainer {
+		grid-template-rows: 67% 34%;
+		grid-template-columns: unset;
+	}
+}
