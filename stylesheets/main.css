@@ -405,3 +405,11 @@ rt {
 	position: absolute;
 	transition: transform 1s cubic-bezier(.68,-0.55,.27,1.55), opacity 1s cubic-bezier(.68,-0.55,.27,1.55);
 }
+
+/* NOTIFICATION POPUP */
+#notificationPopup_header {
+	font-size: 1.7vmax;
+}
+.notificationPopup_button {
+	font-size: 1.3vmax;
+}
